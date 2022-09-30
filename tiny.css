@@ -1,0 +1,136 @@
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+/*테두리 있는 박스*/
+.box {
+    border:1px solid; 
+    padding:10px;
+    width: auto;
+    height: auto;
+}
+
+/*네비게이션 바*/
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*네비게이션 바 아이템 a태그 관련*/
+.nav_item {
+    display: inline;
+}
+
+.nav_item > a{
+    text-decoration: none;
+}
+
+.nav_item > a:link {
+    color: black;
+}
+
+.nav_item > a:visited {
+    color: black;
+}
+
+.nav_item > a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/*네비게이션 바 로고 설정*/
+.logo {
+    display: table; 
+    margin-left: auto; 
+    margin-right: auto;
+    font-size: xx-large;
+}
+
+.logo > a {
+    text-decoration: none;
+}
+
+.logo > a:link {
+    text-decoration: none;
+    color: black
+}
+
+.logo > a:hover {
+    color: black;
+}
+
+.logo > a:visited {
+    color: black;
+}
+
+/*줄바꿈 방지*/
+.nowrap {
+    white-space:nowrap;
+}
+
+/*a 태그 개조*/
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*배경 색깔*/
+.bg_color {
+    background-color: #D2FFD2;
+}
+
+/*그 리드*/
+body {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    " nav    nav    nav   "
+    "   a    main    b   "
+    "   .     .      .   "
+    "footer footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+.left {
+    grid-area: a;
+}
+
+.right {
+    grid-area: b;
+}
+
+main {
+    grid-area: main;
+    /*쓰읍 이게 아니죠*/
+    /*border-right: solid gray;
+    border-left: solid gray;
+    position: fixed;
+    height: 100%; */
+}
+
+footer {
+    grid-area: footer;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
